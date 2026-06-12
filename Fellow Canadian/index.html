@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Arial, Helvetica, sans-serif; background: #F4EFE4; color: #1A1A1A; }
+    body { font-family: Arial, Helvetica, sans-serif; background: #F4EFE4; color: #2e2e2e; }
 
     /* NAV */
     nav {
@@ -32,11 +32,28 @@
     .nav-links a { font-size: 12px; color: rgba(244,239,228,0.92); letter-spacing: 1px; text-transform: uppercase; text-decoration: none; }
     .nav-links a:hover { color: #F4EFE4; }
     .nav-links a.nav-cta {
-      color: #F4EFE4; border: 2px solid rgba(244,239,228,0.65);
-      padding: 8px 20px; font-weight: 700;
-      transition: background 0.2s, border-color 0.2s, color 0.2s;
+      background: #F4EFE4; color: #D42B1E;
+      padding: 10px 22px; font-weight: 700; border-radius: 6px;
+      box-shadow: 0 4px 0 #9E1F15, 0 6px 12px rgba(0,0,0,0.25);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      animation: ctaNudge 5s ease-in-out infinite;
     }
-    .nav-links a.nav-cta:hover { background: #F4EFE4; color: #D42B1E; border-color: #F4EFE4; }
+    .nav-links a.nav-cta:hover {
+      transform: translateY(-2px); color: #D42B1E; animation: none;
+      box-shadow: 0 6px 0 #9E1F15, 0 10px 16px rgba(0,0,0,0.3);
+    }
+    .nav-links a.nav-cta:active {
+      transform: translateY(3px);
+      box-shadow: 0 1px 0 #9E1F15, 0 2px 4px rgba(0,0,0,0.2);
+    }
+    @keyframes ctaNudge {
+      0%, 86%, 100% { transform: translateY(0); }
+      90% { transform: translateY(-4px); }
+      94% { transform: translateY(1px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .nav-links a.nav-cta { animation: none; }
+    }
 
     /* HERO */
     .hero {
@@ -93,11 +110,11 @@
       display: grid; grid-template-columns: 1fr 1fr; gap: 64px; max-width: 1600px;
     }
     .story-body p {
-      font-size: 17px; line-height: 1.75; color: #2a2a2a;
+      font-size: 17px; line-height: 1.75; color:#555;
     }
     .story-body p + p { margin-top: 24px; }
     .story-col-right { padding-top: 4px; }
-    .story-subhead { font-family: Georgia, serif; font-size: 22px; font-style: italic; color: #2a2a2a; margin-bottom: 40px; margin-top: -28px; }
+    .story-subhead { font-family: Georgia, serif; font-size: 22px; font-style: italic; color:#555; margin-bottom: 40px; margin-top: -28px; }
     .story-figure { max-width: 1600px; margin: 56px 0 0; }
     .story-figure img { width: 100%; height: 360px; object-fit: cover; display: block; border-radius: 4px; filter: saturate(0.92); }
     .story-figure figcaption { font-size: 13px; line-height: 1.5; font-style: italic; color: #888; margin-top: 14px; }
@@ -131,7 +148,7 @@
     }
     .ask-title {
       font-family: Georgia, serif; font-size: 24px; font-weight: 700;
-      color: #1A1A1A; margin-bottom: 14px; line-height: 1.2;
+      color: #2e2e2e; margin-bottom: 14px; line-height: 1.2;
     }
     .ask-body { font-size: 15px; color: #555; line-height: 1.7; }
     .ask-link {
@@ -162,10 +179,10 @@
     }
     .about-lead {
       font-family: Georgia, serif; font-size: 22px; font-style: italic;
-      color: #2a2a2a; line-height: 1.6; margin-bottom: 24px;
+      color:#555; line-height: 1.6; margin-bottom: 24px;
     }
     .about-text-col { padding-top: 0; }
-    .about-body { font-size: 17px; color: #2a2a2a; line-height: 1.75; }
+    .about-body { font-size: 17px; color:#555; line-height: 1.75; }
     .about-body + .about-body { margin-top: 20px; }
 
     /* SECTION 5 - SERVICES */
@@ -177,16 +194,50 @@
     .services-intro {
       font-size: 17px; color: #777; margin-bottom: 56px; max-width: 560px;
     }
-    .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 48px; }
+    .services-grid { display: block; border-top: 1px solid rgba(26,26,26,0.18); }
     .service-item {
-      background: transparent; padding: 8px 0 8px 28px; border-left: 2px solid #D42B1E;
-      transition: transform 0.3s ease, border-left-width 0.3s ease;
+      border-bottom: 1px solid rgba(26,26,26,0.18);
     }
-    .service-item:hover { transform: translateX(8px); }
-    .service-item:hover .service-title { color: #D42B1E; }
-    .service-num { font-size: 11px; letter-spacing: 2px; color: #D42B1E; text-transform: uppercase; margin-bottom: 16px; }
-    .service-title { font-family: Georgia, serif; font-size: 24px; color: #1A1A1A; margin-bottom: 14px; font-weight: 700; transition: color 0.3s ease; }
-    .service-body { font-size: 15px; color: #555; line-height: 1.7; }
+    .service-head {
+      display: flex; align-items: center; gap: 28px; width: 100%;
+      background: transparent; border: none; cursor: pointer;
+      padding: 32px 8px; text-align: left;
+      transition: padding-left 0.3s ease;
+    }
+    .service-head:hover { padding-left: 18px; }
+    .service-head:hover .service-title { color: #D42B1E; }
+    .service-num { font-size: 22px; color: #D42B1E; font-weight: 700; flex: 0 0 auto; line-height: 1; }
+    .service-title { font-family: Georgia, serif; font-size: 30px; color: #3a3a3a; font-weight: 600; flex: 1 1 auto; transition: color 0.3s ease; }
+    .service-toggle {
+      flex: 0 0 auto; font-size: 30px; color: #999; line-height: 1;
+      transition: transform 0.35s ease, color 0.3s ease;
+    }
+    .service-item.open .service-toggle { transform: rotate(45deg); color: #D42B1E; }
+    .service-item.open .service-title { color: #D42B1E; }
+    .service-panel {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+      opacity: 0;
+    }
+    .service-item.open .service-panel { max-height: 640px; opacity: 1; padding: 0 8px 36px 50px; }
+    .service-body { font-size: 16px; color: #555; line-height: 1.75; max-width: 760px; margin: 0; }
+    .service-body + .service-body { margin-top: 16px; }
+    /* highlighter / marker for scannable phrases */
+    .hl {
+      background-image: linear-gradient(rgba(255,160,80,0.30), rgba(255,160,80,0.30));
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 100% 100%;
+      padding: 0 2px; box-decoration-break: clone; -webkit-box-decoration-break: clone;
+    }
+    /* marker sweep: JS sets .hl-anim (start hidden), then .hl-on when scrolled into view */
+    .hl.hl-anim {
+      background-size: 0% 100%;
+      transition: background-size 2.4s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    }
+    .hl.hl-anim.hl-on { background-size: 100% 100%; }
+    .service-body a { color: #D42B1E; font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(212,43,30,0.4); transition: border-color 0.2s; }
+    .service-body a:hover { border-bottom-color: #D42B1E; }
     .services-cta { margin-top: 48px; }
     .services-cta a {
       display: inline-block; background: transparent; color: #D42B1E;
@@ -207,10 +258,10 @@
     .praise-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; }
     .praise-card { border-top: 2px solid rgba(212,43,30,0.25); padding-top: 28px; }
     .praise-quote {
-      font-family: Georgia, serif; font-size: 19px; font-style: italic;
-      color: #2a2a2a; line-height: 1.55; margin-bottom: 24px;
+      font-family: Georgia, serif; font-size: 19px; font-style: italic; font-weight: 400;
+      color: #555; line-height: 1.65; margin-bottom: 24px;
     }
-    .praise-name { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #1A1A1A; }
+    .praise-name { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #2e2e2e; }
     .praise-role { font-size: 12px; color: #777; margin-top: 4px; }
 
     /* SECTION 6 - CTA FOOTER */
@@ -238,8 +289,13 @@
       border-top: 1px solid rgba(244,239,228,0.25);
       display: flex; justify-content: space-between; align-items: center;
     }
-    .footer-logo { font-size: 13px; font-weight: 700; color: #F4EFE4; letter-spacing: 2px; text-transform: uppercase; }
+    .footer-logo { display: flex; align-items: center; gap: 9px; font-family: 'DM Serif Display', Georgia, serif; font-size: 26px; font-weight: 400; font-style: italic; color: #F4EFE4; letter-spacing: 0.3px; text-transform: none; }
+    .footer-leaf { height: 30px; width: auto; display: block; }
     .footer-note { font-size: 12px; color: rgba(244,239,228,0.5); letter-spacing: 1px; }
+    .footer-social { display: flex; gap: 22px; align-items: center; }
+    .footer-social a { display: flex; color: rgba(244,239,228,0.75); transition: color 0.2s, transform 0.2s; }
+    .footer-social a:hover { color: #F4EFE4; transform: translateY(-2px); }
+    .footer-social svg { width: 22px; height: 22px; display: block; fill: currentColor; }
 
     /* MOBILE */
     @media (max-width: 1024px) {
@@ -250,12 +306,15 @@
       nav { padding: 16px 24px; }
       .nav-links { gap: 20px; }
       section { padding: 56px 24px; }
-      .hero { padding: 64px 24px 72px; min-height: auto; }
+      /* face on top, text at the bottom, no CTA */
+      .hero { padding: 64px 24px 56px; min-height: 540px; align-items: flex-end; }
       .hero h1 { font-size: 38px; }
       .hero h1 span { white-space: normal; }
-      .hero-sub { font-size: 21px; margin-bottom: 40px; }
-      .hero-img { width: 85%; }
-      .hero-overlay { background: linear-gradient(to right, rgba(212,43,30,1) 0%, rgba(212,43,30,0.88) 55%, rgba(212,43,30,0.55) 100%); }
+      .hero-sub { font-size: 21px; margin-bottom: 0; }
+      .hero .cta-btn { display: none; }
+      .hero-img { width: 100%; filter: brightness(1.65) contrast(1.15); }
+      .hero-overlay { background: linear-gradient(to bottom, rgba(212,43,30,0.3) 0%, rgba(212,43,30,0.25) 45%, rgba(212,43,30,0.88) 100%); }
+      .hero h1, .hero-sub { text-shadow: 0 2px 10px rgba(0,0,0,0.4); }
       .story h2, .asks h2, .about h2, .services h2, .praise h2, .cta-footer h2 { font-size: 34px; }
       .story-body, .about-inner, .services-grid { grid-template-columns: 1fr; gap: 32px; }
       .asks-grid, .praise-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -310,8 +369,7 @@
   <nav>
     <div class="nav-logo"><span>Fellow Canadian</span><img src="leaf.png" class="nav-leaf" alt=""></div>
     <div class="nav-links">
-      <a href="#story">The Challenge</a>
-      <a href="#work">Work With Me</a>
+      <a href="#asks">The Action Plan</a>
       <a href="https://tidycal.com/devesh/short-meeting" target="_blank" rel="noopener" class="nav-cta">Let&#8217;s Talk</a>
     </div>
   </nav>
@@ -336,10 +394,10 @@
     <div class="story-body">
       <div class="story-col-left">
         <p>For over two hundred years, Canada and the United States didn&#8217;t just share a border. They shared everything. Trade, culture, friendship, the longest undefended border in the world. Two countries that figured out how to be neighbours, and meant it. It wasn&#8217;t perfect. But it worked. Remarkably well, actually.</p>
-        <p>Then came one man. Loud, reckless, and apparently unbothered by two centuries of goodwill. In a matter of months, tariffs replaced handshakes. Threats replaced diplomacy. A friendship that generations had carefully built was being dismantled by someone who had never valued it to begin with.</p>
+        <p>Then came one man. <span class="hl">Loud, reckless, and apparently unbothered by two centuries of goodwill.</span> In a matter of months, tariffs replaced handshakes. Threats replaced diplomacy. A friendship that generations had carefully built was being dismantled by someone who had never valued it to begin with.</p>
       </div>
       <div class="story-col-right">
-        <p>But here&#8217;s what he forgot. He speaks for a government. He doesn&#8217;t speak for you. You didn&#8217;t buy it. You didn&#8217;t ask for the chaos. You have a choice, and choosing to show up, do good work, and treat your neighbours with decency is the most American thing you can do right now.</p>
+        <p>But here&#8217;s what he forgot. He speaks for a government. He doesn&#8217;t speak for you. You didn&#8217;t buy it. You didn&#8217;t ask for the chaos. <span class="hl">You have a choice</span>, and choosing to show up, do good work, and treat your neighbours with decency is the most American thing you can do right now.</p>
         <p>That&#8217;s where I come in. I&#8217;m your fellow Canadian. And we should definitely talk.</p>
       </div>
     </div>
@@ -387,7 +445,7 @@
       </div>
       <div class="about-text-col">
         <p class="about-lead">Helped several fellow US founders build their brand.</p>
-        <p class="about-body">If I could do one thing for a living, I’d invent brands. I’ve been obsessed with brand building since I started my career in advertising over two decades ago.</p>
+        <p class="about-body"><span class="hl">If I could do one thing for a living, I’d invent brands.</span> I’ve been obsessed with brand building since I started my career in advertising over two decades ago.</p>
         <p class="about-body">I’ve lived across three continents, working for consumer giants in India, banks in Nigeria, and startups in Silicon Valley.</p>
         <p class="about-body">In the past few years, I’ve worked almost exclusively with US startups and companies, helping them with marketing and brand building.</p>
         <p class="about-body">And when a project needs more hands, I’ve got a small circle of fellow Canadians ready to jump in: designers, developers, and strategists I trust.</p>
@@ -399,29 +457,48 @@
   <!-- SECTION 5: SERVICES -->
   <section class="services" id="work">
     <h2>How can I help?</h2>
-    <p class="services-intro">No overhead. No ego. Just good work from good neighbours.</p>
+    <p class="services-intro">No overhead. No time zone hassles. Just good work from good neighbours.</p>
     <div class="services-grid">
       <div class="service-item">
-        <div class="service-num">01</div>
-        <div class="service-title">Brand Strategy</div>
-        <p class="service-body">Positioning, messaging, voice, identity. I help you figure out who you are and how to say it in a way that makes people stop and pay attention.</p>
+        <button class="service-head" type="button" aria-expanded="false">
+          <span class="service-num">1</span>
+          <span class="service-title">Brand Strategy</span>
+          <span class="service-toggle">+</span>
+        </button>
+        <div class="service-panel">
+          <p class="service-body">If I could do one thing for a living, I&#8217;d invent brands. I&#8217;ve been obsessed with brand building since I started in advertising over two decades ago. From naming to rebrands, from personal brands to mega commercial ones, <span class="hl">brand strategy is the work I love most</span>. I share a lot of it with founders on my YouTube channel, <a href="https://www.youtube.com/@BrandBroccoli" target="_blank" rel="noopener">@BrandBroccoli</a>.</p>
+        </div>
       </div>
       <div class="service-item">
-        <div class="service-num">02</div>
-        <div class="service-title">Design</div>
-        <p class="service-body">Visual identity, digital design, campaigns. The kind of work that looks intentional because it is.</p>
+        <button class="service-head" type="button" aria-expanded="false">
+          <span class="service-num">2</span>
+          <span class="service-title">Marketing</span>
+          <span class="service-toggle">+</span>
+        </button>
+        <div class="service-panel">
+          <p class="service-body"><span class="hl">I&#8217;ve been a founder&#8217;s marketer for most of my career.</span> I know most founders don&#8217;t have a marketing problem, they have a clarity problem. My marketing strategy is relentless reduction: one market, one message, one or two channels. AI has levelled the field on execution, so best practices won&#8217;t set you apart anymore. Clarity, creativity, and courage will. I&#8217;ll bring the first two. The third is on you.</p>
+        </div>
       </div>
       <div class="service-item">
-        <div class="service-num">03</div>
-        <div class="service-title">Development</div>
-        <p class="service-body">Websites, digital products, the infrastructure behind the brand. Built properly, so it lasts.</p>
-      </div>
-      <div class="service-item">
-        <div class="service-num">04</div>
-        <div class="service-title">Marketing</div>
-        <p class="service-body">Go-to-market strategy, campaign development, content. The plan and the execution, together.</p>
+        <button class="service-head" type="button" aria-expanded="false">
+          <span class="service-num">3</span>
+          <span class="service-title">Product Leadership</span>
+          <span class="service-toggle">+</span>
+        </button>
+        <div class="service-panel">
+          <p class="service-body">Having worked in UX, product strategy and product management, I can ensure all the stakeholders are aligned and <span class="hl">build a product that users want</span>. This is where all my wide experience comes together.</p>
+        </div>
       </div>
     </div>
+    <script>
+      document.querySelectorAll('.service-head').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var item = btn.parentElement;
+          var isOpen = item.classList.toggle('open');
+          btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+      });
+    </script>
   </section>
 
 
@@ -431,32 +508,32 @@
     <h2>What fellow founders say about me</h2>
     <div class="praise-grid">
       <div class="praise-card">
-        <p class="praise-quote">&#8220;Great contractor. Hard working; good communicator; excellent marketer. Thanks, Devesh.&#8221;</p>
+        <p class="praise-quote">&#8220;Great contractor. Hard working; good communicator; <span class="hl">excellent marketer</span>. Thanks, Devesh.&#8221;</p>
         <div class="praise-name">Adam Rose</div>
         <div class="praise-role">Rose Law Firm</div>
       </div>
       <div class="praise-card">
-        <p class="praise-quote">&#8220;Devesh had an amazing process that helped us identify our JTBD. Great copywriter and wonderful marketer.&#8221;</p>
+        <p class="praise-quote">&#8220;Devesh had <span class="hl">an amazing process</span> that helped us identify our JTBD. Great copywriter and wonderful marketer.&#8221;</p>
         <div class="praise-name">Wes Bush</div>
         <div class="praise-role">Product Led Growth</div>
       </div>
       <div class="praise-card">
-        <p class="praise-quote">&#8220;Every other marketing specialist started selling me solutions &mdash; SEO, FB ads, Google ads &mdash; straight away. Devesh was the only one who helped me find my real problem and rethink the value I offer my niche. He&#8217;s saved me a ton of time, and the new version of my site is already getting great feedback. One of the few people who actually care.&#8221;</p>
+        <p class="praise-quote">&#8220;Every other marketing specialist started selling me solutions &mdash; SEO, FB ads, Google ads &mdash; straight away. Devesh was <span class="hl">the only one who helped me find my real problem</span> and rethink the value I offer my niche. He&#8217;s saved me a ton of time, and the new version of my site is already getting great feedback. One of the few people who actually care.&#8221;</p>
         <div class="praise-name">Auon Raza</div>
         <div class="praise-role">Stealth ecom startup</div>
       </div>
       <div class="praise-card">
-        <p class="praise-quote">&#8220;Devesh is a true pro! Not only does he have real skills, he actually cares about helping us progress forward. I have come to rely on Devesh to advise us when there are difficult decisions to make. He is extremely thorough and always brings fresh and valuable insight to each and every problem we present to him.&#8221;</p>
+        <p class="praise-quote">&#8220;Devesh is a true pro! Not only does he have real skills, <span class="hl">he actually cares</span> about helping us progress forward. I have come to rely on Devesh to advise us when there are difficult decisions to make. He is extremely thorough and always brings fresh and valuable insight to each and every problem we present to him.&#8221;</p>
         <div class="praise-name">Carletus Willis</div>
         <div class="praise-role">Bened Life</div>
       </div>
       <div class="praise-card">
-        <p class="praise-quote">&#8220;We hired Devesh to help us introduce our fledgling project to a broader community. He immediately impressed us with his expertise and open &amp; friendly manner. He&#8217;s been very patient as we struggled to find our footing, providing both high-level guidance and suggestions but also diving into the nitty-gritty to help us craft our message. While his advice on what to do has been extremely helpful, he is also able to patiently and tactfully explain when something may be a bad idea &mdash; a very valuable trait that helped us avoid basic errors on more than one occasion! We&#8217;re very happy to work with Devesh and hope to continue engaging him in the future.&#8221;</p>
+        <p class="praise-quote">&#8220;Devesh gives high-level guidance but also dives into the nitty-gritty &mdash; and he&#8217;ll tactfully tell you when something is a bad idea. That saved us from basic errors more than once.&#8221;</p>
         <div class="praise-name">Stephen Taylor</div>
         <div class="praise-role">The Coin</div>
       </div>
       <div class="praise-card">
-        <p class="praise-quote">&#8220;Devesh has been incredibly helpful with us better understanding the landscape of digital marketing and business strategy. He is great at communicating the bigger picture insights while providing actionable steps towards marketing and business goals. I would highly recommend working with Devesh. In addition to that, he is a very kind and thoughtful person as well.&#8221;</p>
+        <p class="praise-quote">&#8220;Devesh has been incredibly helpful with us better understanding the landscape of digital marketing and business strategy. He is great at communicating the bigger picture insights while providing actionable steps towards marketing and business goals. <span class="hl">I would highly recommend working with Devesh</span>. In addition to that, he is a very kind and thoughtful person as well.&#8221;</p>
         <div class="praise-name">Ling Ly Tan</div>
         <div class="praise-role">LINGGO</div>
       </div>
@@ -472,7 +549,18 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">Fellow Canadian</div>
+    <div class="footer-logo"><span>Fellow Canadian</span><img src="leaf.png" class="footer-leaf" alt=""></div>
+    <div class="footer-social">
+      <a href="https://www.youtube.com/@BrandBroccoli" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+      </a>
+      <a href="https://medium.com/@deveshuba" target="_blank" rel="noopener" aria-label="Blog on Medium">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42S20.96 8.46 20.96 12zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/deveshuba/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 0 1-2.07-2.07 2.07 2.07 0 1 1 2.07 2.07zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+      </a>
+    </div>
     <div class="footer-note">© 2026 Fellow Canadian</div>
   </footer>
 
@@ -490,6 +578,15 @@
         });
       }, { threshold: 0.15 });
       targets.forEach(function (el) { io.observe(el); });
+
+      var hls = document.querySelectorAll('.hl');
+      hls.forEach(function (el) { el.classList.add('hl-anim'); });
+      var hlIo = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('hl-on'); hlIo.unobserve(e.target); }
+        });
+      }, { threshold: 0.6 });
+      hls.forEach(function (el) { hlIo.observe(el); });
     }
   </script>
 </body>
