@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work With a Fellow Canadian</title>
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+  <meta name="description" content="You need great marketing. I need great clients. Classic Canada-US trade. Clear scope, clear price, no long sales dance, three ways to work with a Fellow Canadian.">
+  <meta property="og:title" content="Work With a Fellow Canadian">
+  <meta property="og:description" content="You need great marketing. I need great clients. Classic Canada-US trade. Clear scope, clear price, no long sales dance.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://fellowcanadian.com/og.jpg">
+  <meta property="og:url" content="https://fellowcanadian.com/services">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #D42B1E;
+      --red-dark: #9E1F15;
+      --red-deep: #2B0E0A;
+      --cream: #F4EFE4;
+      --paper: #FBF9F4;
+      --white: #FFFFFF;
+      --ink: #1A1A1A;
+      --grey: #6B6660;
+      --line: rgba(26,26,26,0.10);
+      --line-red: rgba(212,43,30,0.18);
+      --shadow: 0 1px 2px rgba(43,14,10,0.04), 0 8px 24px rgba(43,14,10,0.06);
+      --shadow-lift: 0 2px 4px rgba(43,14,10,0.05), 0 18px 44px rgba(43,14,10,0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, Helvetica, Arial, sans-serif; background: var(--cream); color: var(--ink); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    .serif { font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-weight: 400; }
+
+    /* NAV */
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 72px; background: var(--cream);
+      border-bottom: 1px solid rgba(26,26,26,0.08);
+      box-shadow: 0 2px 16px rgba(43,14,10,0.07);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 9px; font-family: 'DM Serif Display', Georgia, serif; font-size: 25px; font-style: italic; color: var(--red); letter-spacing: 0.2px; }
+    .nav-logo a { color: inherit; text-decoration: none; display: flex; align-items: center; gap: 9px; }
+    .nav-leaf { height: 28px; width: auto; display: block; }
+    .nav-links { display: flex; align-items: center; gap: 36px; }
+    .nav-links a { font-size: 15px; color: var(--red-dark); letter-spacing: 0.2px; text-decoration: none; font-weight: 500; }
+    .nav-links a:hover { color: var(--red); }
+    .nav-links a.nav-cta {
+      background: var(--red); color: var(--cream);
+      padding: 10px 22px; font-weight: 700; border-radius: 6px; line-height: 1.5;
+      box-shadow: 0 4px 0 var(--red-dark), 0 6px 12px rgba(0,0,0,0.25);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      animation: ctaNudge 5s ease-in-out infinite;
+    }
+    .nav-links a.nav-cta:hover {
+      transform: translateY(-2px); color: var(--cream); animation: none;
+      box-shadow: 0 6px 0 var(--red-dark), 0 10px 16px rgba(0,0,0,0.3);
+    }
+    .nav-links a.nav-cta:active {
+      transform: translateY(3px);
+      box-shadow: 0 1px 0 var(--red-dark), 0 2px 4px rgba(0,0,0,0.2);
+    }
+    @keyframes ctaNudge {
+      0%, 86%, 100% { transform: translateY(0); }
+      90% { transform: translateY(-4px); }
+      94% { transform: translateY(1px); }
+    }
+    @media (prefers-reduced-motion: reduce) { .nav-links a.nav-cta { animation: none; } }
+
+    /* HERO (full-bleed image) */
+    .s-hero { position: relative; min-height: 620px; display: flex; align-items: center; background: var(--red-deep); color: var(--cream); overflow: hidden; }
+    .s-hero::after { content: ""; position: absolute; inset: 0; z-index: 0; background: url("devesh-cafe.jpeg") no-repeat; background-size: cover; background-position: 80% center; animation: kenburns 26s ease-out forwards; }
+    .s-hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(100deg, rgba(40,21,16,0.90) 0%, rgba(64,31,24,0.74) 36%, rgba(110,52,40,0.32) 62%, rgba(110,52,40,0) 100%); }
+    @keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.07); } }
+    .s-hero .wrap { position: relative; z-index: 1; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 72px; }
+    .s-hero .h-text { max-width: 620px; }
+    .s-hero .h-eyebrow { display: flex; align-items: center; gap: 10px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(244,239,228,0.85); margin-bottom: 22px; font-weight: 500; }
+    .s-hero .h-eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--cream); display: inline-block; }
+    .s-hero h1 { font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: 58px; line-height: 1.05; max-width: 15ch; margin-bottom: 28px; color: #FFFFFF; }
+    .s-hero .h-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin-bottom: 28px; }
+    .s-hero .h-cta {
+      display: inline-block; background: var(--cream); color: var(--red);
+      padding: 10px 22px; font-size: 14px; font-weight: 700; letter-spacing: 0.2px;
+      text-decoration: none; border-radius: 6px; line-height: 1.5;
+      box-shadow: 0 4px 0 #C9BEA6, 0 6px 12px rgba(0,0,0,0.25);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .s-hero .h-cta:hover {
+      transform: translateY(-2px); background: #FFFFFF;
+      box-shadow: 0 6px 0 #C9BEA6, 0 10px 16px rgba(0,0,0,0.3);
+    }
+    .s-hero .h-cta:active {
+      transform: translateY(3px);
+      box-shadow: 0 1px 0 #C9BEA6, 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .s-hero .h-trust { font-size: 14.5px; color: rgba(255,255,255,0.9); }
+    .s-hero .h-trust strong { color: #FFFFFF; font-weight: 600; }
+    .s-hero .h-proof { display: inline-block; max-width: 100%; }
+    .s-hero .h-guarantee { display: flex; align-items: center; gap: 8px; margin-top: 6px; font-size: 14.5px; color: rgba(255,255,255,0.9); font-style: normal; }
+    .s-hero .h-guarantee .g-check { font-weight: 700; color: #7CCF9B; }
+
+    /* SECTION SHELL */
+    .section { max-width: 1200px; margin: 0 auto; padding: 0 72px; }
+    .eyebrow { display: flex; align-items: center; gap: 10px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--grey); margin-bottom: 14px; font-weight: 500; }
+    .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--red); display: inline-block; }
+    .sec-head { padding-top: 84px; }
+    .sec-head h2 { font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: 38px; color: var(--ink); line-height: 1.1; }
+    .sec-head h2 em { color: var(--red-dark); font-style: italic; }
+    .sec-head .lede { font-size: 16.5px; color: var(--grey); max-width: 58ch; margin-top: 12px; }
+
+    /* ENTRY OFFER (full-width feature card, light) */
+    .entry { margin: 36px auto 0; }
+    .entry-card {
+      background: var(--white); border: 1px solid var(--line); box-shadow: var(--shadow);
+      display: grid; grid-template-columns: 1.15fr 1fr; overflow: hidden;
+    }
+    .entry-main { padding: 48px 48px 44px; border-right: 1px solid var(--line); display: flex; flex-direction: column; }
+    .entry-side { padding: 48px 44px; background: var(--paper); display: flex; flex-direction: column; }
+    .tag { display: inline-block; align-self: flex-start; font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; color: var(--red); border: 1px solid var(--line-red); padding: 5px 12px; margin-bottom: 22px; }
+    .offer-title { font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: 34px; color: var(--ink); line-height: 1.08; margin-bottom: 14px; }
+    .promise { font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: 21px; color: var(--red-dark); margin-bottom: 18px; }
+    .body { font-size: 16px; color: var(--ink); margin-bottom: 20px; }
+    .forwho { font-size: 14px; color: var(--grey); border-top: 1px solid var(--line); padding-top: 16px; }
+    .forwho strong { color: var(--ink); font-weight: 600; }
+    .entry-side .label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--grey); margin-bottom: 16px; font-weight: 600; }
+    .quote { margin-bottom: auto; display: grid; grid-template-columns: auto 1fr; column-gap: 18px; align-items: start; }
+    .quote .qmark { grid-row: span 2; font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: 78px; line-height: 0.7; color: #E3A99F; margin-top: 6px; }
+    .quote p { font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: 18px; color: var(--ink); line-height: 1.4; }
+    .quote cite { display: block; font-style: normal; font-size: 12px; letter-spacing: 0.6px; text-transform: uppercase; color: var(--grey); margin-top: 14px; font-weight: 500; }
+
+    /* META: For + Guarantee, stacked */
+    .meta { display: flex; flex-direction: column; gap: 11px; margin: 4px 0 22px; padding-top: 18px; border-top: 1px solid var(--line); }
+    .meta-item { display: flex; align-items: flex-start; gap: 10px; font-size: 13.5px; color: var(--grey); line-height: 1.45; }
+    .meta-item .mi { width: 17px; height: 17px; flex-shrink: 0; margin-top: 1px; stroke: var(--red-dark); fill: none; }
+    .meta-item strong { color: var(--ink); font-weight: 600; }
+    .bestfor { border-left: 2px solid var(--red-dark); padding-left: 15px; margin: 6px 0 22px; }
+    .bestfor .lbl { display: block; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--red-dark); font-weight: 600; margin-bottom: 5px; }
+    .bestfor .txt { font-size: 15px; color: var(--ink); line-height: 1.5; }
+    .flagship .bestfor { border-left-color: #E3A99F; }
+    .flagship .bestfor .lbl { color: #E3A99F; }
+    .flagship .bestfor .txt { color: rgba(244,239,228,0.95); }
+    .foot { margin-top: 28px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .price-wrap { display: flex; flex-direction: column; gap: 5px; }
+    .price { font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: 30px; color: var(--ink); line-height: 1.15; }
+    .price small { font-size: 13px; color: var(--grey); font-style: normal; font-family: 'Inter', sans-serif; }
+    .price-note { font-size: 12.5px; color: var(--grey); letter-spacing: 0.2px; }
+    .price-note .amt { color: var(--ink); font-weight: 600; }
+    .price-note .maga { color: var(--red); font-weight: 700; letter-spacing: 0.5px; }
+    .price .was { font-size: 18px; color: var(--grey); font-style: normal; margin-right: 8px; position: relative; }
+    .price .was::after { content: ""; position: absolute; left: 0; top: 52%; height: 2px; width: 100%; background: currentColor; }
+    .price .now { display: inline-block; }
+    .price-note.special { color: var(--red); font-weight: 600; }
+    .flagship .price .was { color: rgba(244,239,228,0.6); }
+    .flagship .price-note.special { color: #E3A99F; }
+    .flagship .price-note { color: rgba(244,239,228,0.72); }
+    .flagship .price-note .amt { color: #FFFFFF; }
+    .flagship .price-note .maga { color: #E3A99F; }
+    a.cta {
+      display: inline-block;
+      background: var(--red); color: var(--cream); border: 1px solid var(--red);
+      padding: 14px 26px; font-size: 13.5px; font-weight: 600; letter-spacing: 0.2px;
+      text-decoration: none; transition: background 0.18s, transform 0.15s; white-space: nowrap;
+    }
+    a.cta:hover { background: var(--red-dark); border-color: var(--red-dark); transform: translateY(-1px); }
+    a.cta.ghost { background: transparent; color: var(--red); }
+    a.cta.ghost:hover { background: var(--red); color: var(--cream); }
+    a.cta.cream { background: var(--cream); color: var(--red); border-color: var(--cream); }
+    a.cta.cream:hover { background: #FFFFFF; border-color: #FFFFFF; }
+
+    /* Glint sweep on the flagship + footer book buttons, and the hero guarantee line */
+    a.cta.cream { position: relative; overflow: hidden; }
+    .s-hero .h-guarantee { position: relative; overflow: hidden; }
+    .s-hero .h-guarantee strong { color: #FFFFFF; font-weight: 600; }
+    a.cta.cream::after, .s-hero .h-guarantee::after {
+      content: ""; position: absolute; top: 0; left: -60%; width: 50%; height: 100%;
+      background: linear-gradient(100deg, transparent, rgba(255,255,255,0.85), transparent);
+      transform: skewX(-18deg); pointer-events: none; animation: btn-sweep 3.4s ease-in-out infinite;
+    }
+    @keyframes btn-sweep { 0% { left: -60%; } 55% { left: 130%; } 100% { left: 130%; } }
+    @media (prefers-reduced-motion: reduce) { a.cta.cream::after, .s-hero .h-guarantee::after { animation: none; opacity: 0; } }
+
+    .guarantee-inline { font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: 14px; color: var(--red); margin-top: 18px; }
+
+    /* HELPER */
+    .helper { margin: 22px auto 0; }
+    .helper-box { background: var(--paper); border: 1px solid var(--line); padding: 22px 30px; font-size: 15.5px; color: var(--ink); }
+    .helper-box .lead { font-family: 'DM Serif Display', Georgia, serif; font-style: italic; color: var(--red-dark); }
+    .helper-box strong { font-weight: 600; }
+
+    /* THE TWO ENGAGEMENTS */
+    .engagements { margin: 36px auto 0; display: flex; flex-direction: column; gap: 28px; }
+
+    /* Flagship card (dark, the deliberate spike) */
+    .flagship { background: var(--red-deep); color: var(--cream); box-shadow: var(--shadow-lift); display: flex; flex-direction: column; overflow: hidden; }
+    .flagship-hero { position: relative; }
+    .flagship-hero img { width: 100%; height: 430px; object-fit: cover; display: block; }
+    .flagship-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, rgba(35,18,13,0.95) 0%, rgba(48,24,18,0.86) 30%, rgba(78,38,29,0.58) 54%, rgba(110,52,40,0.2) 76%, rgba(110,52,40,0) 100%); }
+    .flagship-hero .ftitle { position: absolute; left: 44px; top: 50%; transform: translateY(-50%); max-width: 54%; z-index: 2; }
+    .flagship-hero .badge { display: inline-block; font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; color: var(--red); background: var(--cream); padding: 5px 12px; margin-bottom: 16px; }
+    .flagship-hero .ftitle h3 { font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: 46px; color: #FFFFFF; line-height: 1.04; margin-bottom: 10px; }
+    .flagship-hero .ftitle .fsub { font-size: 13px; letter-spacing: 1.4px; text-transform: uppercase; color: rgba(244,239,228,0.85); font-weight: 500; }
+    .flagship-body { padding: 44px; display: flex; flex-direction: column; flex: 1; }
+    .flagship .promise { color: #FFFFFF; }
+    .flagship .body { color: rgba(244,239,228,0.94); }
+    .flagship .meta { border-top-color: rgba(244,239,228,0.22); }
+    .flagship .meta-item { color: rgba(244,239,228,0.82); }
+    .flagship .meta-item .mi { stroke: #E3A99F; }
+    .flagship .meta-item strong { color: #FFFFFF; }
+    .flagship .quote { margin-top: 24px; margin-bottom: 0; }
+    .flagship .quote .qmark { color: rgba(231,181,174,0.6); }
+    .flagship .quote p { color: rgba(244,239,228,0.95); font-size: 16.5px; }
+    .flagship .quote cite { color: rgba(244,239,228,0.65); }
+    .flagship .price { color: #FFFFFF; }
+    .flagship .price small { color: rgba(244,239,228,0.65); }
+    .flagship .foot { margin: 32px -44px -44px; padding: 24px 44px; background: rgba(244,239,228,0.07); border-top: 1px solid rgba(244,239,228,0.18); }
+
+    /* Personal brand card (light) */
+    .standard { background: var(--white); border: 1px solid var(--line); box-shadow: var(--shadow); padding: 44px; display: flex; flex-direction: column; overflow: hidden; }
+    .standard .foot { margin: 32px -44px -44px; padding: 24px 44px; background: var(--paper); border-top: 1px solid var(--line); }
+    .flagship .body { max-width: 70ch; }
+    .standard .offer-num { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--grey); margin-bottom: 16px; font-weight: 600; }
+    .standard .offer-title { font-size: 30px; }
+    .standard .quote { margin-top: 4px; margin-bottom: 0; }
+
+    /* SPECIAL RIBBON */
+    .ribbon { position: relative; background: #3C3B6E; color: #FFFFFF; text-align: center; padding: 14px 20px 13px; font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 36px; border-top: 3px solid #B22234; border-bottom: 3px solid #B22234; overflow: hidden; }
+    .ribbon .sub { display: block; font-size: 11px; font-weight: 600; letter-spacing: 2.2px; color: rgba(255,255,255,0.85); margin-top: 4px; }
+    .ribbon .star { position: absolute; animation: rib-twinkle 2.5s infinite; }
+    @keyframes rib-twinkle { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
+
+    /* ICON ROWS (deliverable / best for) */
+    .icon-row { display: flex; align-items: center; gap: 15px; margin: 2px 0 18px; }
+    .icon-row .ic { width: 48px; height: 48px; border-radius: 50%; background: #F1EFE8; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: var(--ink); }
+    .icon-row .lbl { font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--grey); font-weight: 600; margin-bottom: 2px; }
+    .icon-row .main { font-size: 15px; color: var(--ink); font-weight: 600; line-height: 1.35; }
+    .icon-row .sub { font-size: 13px; color: var(--grey); line-height: 1.45; }
+    .flagship .icon-row .ic { background: rgba(244,239,228,0.12); color: #F4EFE4; }
+    .flagship .icon-row .main { color: #FFFFFF; }
+    .flagship .icon-row .sub { color: rgba(244,239,228,0.72); }
+    .flagship .icon-row .lbl { color: #E3A99F; }
+
+    /* SCROLL REVEAL + PRICE ANIMATION */
+    html.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+    html.js .reveal.in { opacity: 1; transform: none; }
+    html.js .reveal .icon-row { opacity: 0; transform: translateY(14px); transition: opacity .5s ease .25s, transform .5s ease .25s; }
+    html.js .reveal .icon-row + .icon-row { transition-delay: .4s; }
+    html.js .reveal.in .icon-row { opacity: 1; transform: none; }
+    html.js .reveal .price .was::after { width: 0; transition: width .5s ease .55s; }
+    html.js .reveal.in .price .was::after { width: 100%; }
+    html.js .reveal .price .now { opacity: 0; transform: scale(.85); transition: opacity .35s ease 1.05s, transform .35s ease 1.05s; }
+    html.js .reveal.in .price .now { opacity: 1; transform: scale(1); }
+
+    /* CARD HOVER LIFT */
+    .standard, .flagship { transition: transform .22s ease, box-shadow .22s ease; }
+    .standard:hover, html.js .standard.reveal.in:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); }
+    .flagship:hover, html.js .flagship.reveal.in:hover { transform: translateY(-3px); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .s-hero::after, .why-photo img { animation: none; }
+      .why-photo-ring .dust { animation: none; opacity: 0; }
+      .ribbon .star { animation: none; opacity: 0.6; }
+      .why-item:hover { transform: none; }
+      html.js .reveal, html.js .reveal .icon-row, html.js .reveal .price .now { opacity: 1; transform: none; transition: none; }
+      html.js .reveal .price .was::after { width: 100%; transition: none; }
+      .standard:hover, .flagship:hover { transform: none; }
+    }
+
+    /* PROOF STRIP */
+    .proof { padding-top: 40px; }
+    .proof-marquee { overflow: hidden; position: relative; margin-top: 10px;
+      -webkit-mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%); }
+    .proof-track { display: flex; width: max-content; animation: proof-scroll 38s linear infinite; }
+    .proof-marquee:hover .proof-track { animation-play-state: paused; }
+    .p-item { display: inline-flex; align-items: center; gap: 11px; margin-right: 52px; white-space: nowrap; font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: 22px; color: var(--ink); }
+    .p-item img { height: 14px; width: auto; display: block; border: 1px solid rgba(0,0,0,0.12); }
+    @keyframes proof-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @media (prefers-reduced-motion: reduce) { .proof-track { animation: none; flex-wrap: wrap; row-gap: 16px; } }
+
+    /* WHY ME */
+    .why { padding-top: 88px; }
+    .why-panel { padding: 0; }
+    .why-head { display: flex; align-items: center; gap: 30px; margin-bottom: 40px; }
+    .why-photo-ring { position: relative; flex-shrink: 0; }
+    .why-photo-ring .dust { position: absolute; font-size: 13px; line-height: 1; color: #E0A93C; opacity: 0; animation: dustfloat 2.8s ease-in-out infinite; pointer-events: none; text-shadow: 0 0 6px rgba(224,169,60,0.45); }
+    .why-photo-ring .dust.r { color: var(--red); text-shadow: 0 0 6px rgba(212,43,30,0.35); }
+    .why-photo-ring .dust.p { color: #E3897B; text-shadow: 0 0 6px rgba(227,137,123,0.4); }
+    .why-photo-ring .dust.b { color: #3C3B6E; text-shadow: 0 0 6px rgba(60,59,110,0.35); }
+    .why-photo-ring .dust.s { font-size: 9px; }
+    .why-photo-ring .dust.l { font-size: 17px; }
+    @keyframes dustfloat {
+      0%, 100% { opacity: 0; transform: translateY(6px) scale(0.4) rotate(0deg); }
+      40% { opacity: 1; }
+      65% { opacity: 1; transform: translateY(-9px) scale(1.05) rotate(40deg); }
+      92% { opacity: 0; transform: translateY(-16px) scale(0.6) rotate(70deg); }
+    }
+    .why-photo { display: block; width: 108px; height: 108px; border-radius: 50%; overflow: hidden; border: 4px solid var(--cream); box-shadow: 0 6px 20px rgba(43,14,10,0.16); background: #C7B393; }
+    .why-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 16%; animation: whyzoom 11s ease-in-out infinite alternate; }
+    @keyframes whyzoom { from { transform: scale(1); } to { transform: scale(1.16); } }
+    .why-item { transition: transform .22s ease; }
+    .why-item:hover { transform: translateY(-4px); }
+    .why-item:hover .why-num { color: var(--red); }
+    .why-num { transition: color .22s ease; }
+    html.js .why-grid .why-item.reveal:nth-child(2) { transition-delay: .18s; }
+    html.js .why-grid .why-item.reveal:nth-child(3) { transition-delay: .36s; }
+    .why-head-text h2 { font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: 42px; color: var(--ink); line-height: 1.04; margin-bottom: 12px; }
+    .why-quote { font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: 22px; color: var(--red-dark); line-height: 1.3; }
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px; padding-top: 40px; border-top: 1px solid var(--line); }
+    .why-num { font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: 24px; color: var(--red-dark); margin-bottom: 10px; }
+    .why-item h3 { font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: 21px; color: var(--ink); margin-bottom: 10px; }
+    .why-item p { font-size: 14.5px; color: var(--grey); }
+
+    /* GUARANTEE */
+    .guarantee-band { padding-top: 72px; }
+    .guarantee-box { background: var(--white); border: 1px solid var(--line-red); box-shadow: var(--shadow); padding: 56px 48px; text-align: center; }
+    .guarantee-box .eyebrow { justify-content: center; }
+    .guarantee-box h2 { font-family: 'Special Elite', Courier, monospace; font-size: 34px; color: var(--red); line-height: 1.14; margin-bottom: 18px; letter-spacing: -0.5px; }
+    .guarantee-box p { font-family: 'Special Elite', Courier, monospace; font-size: 15.5px; color: var(--ink); max-width: 58ch; margin: 0 auto; line-height: 1.75; }
+
+    /* CTA FOOTER (the second deliberate red spike) */
+    .cta-footer { position: relative; overflow: hidden; background: var(--red-dark); text-align: center; padding: 100px 72px; margin-top: 96px; }
+    .cta-footer h2, .cta-footer p, .cta-footer .cta { position: relative; z-index: 1; }
+    .seal-stamp { position: absolute; z-index: 0; right: -56px; top: 50%; transform: translateY(-50%) rotate(-8deg); width: 360px; height: 360px; opacity: 0.14; pointer-events: none; }
+    .seal-stamp .seal-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .seal-stamp text { fill: #F4EFE4; font-family: 'Inter', sans-serif; font-weight: 500; text-transform: uppercase; }
+    .seal-stamp .seal-top { font-size: 17px; letter-spacing: 3px; }
+    .seal-stamp .seal-bot { font-size: 10.5px; letter-spacing: 0.5px; }
+    .seal-stamp .seal-star { font-size: 15px; }
+    .seal-stamp .seal-leaf { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 116px; height: 116px; background: #F4EFE4; -webkit-mask: url("leaf.png") center/contain no-repeat; mask: url("leaf.png") center/contain no-repeat; }
+    .cta-footer .eyebrow { justify-content: center; color: rgba(244,239,228,0.8); margin-bottom: 18px; }
+    .cta-footer .eyebrow .dot { background: var(--cream); }
+    .cta-footer h2 { font-family: 'Special Elite', Courier, monospace; font-size: 40px; color: var(--cream); margin-bottom: 18px; line-height: 1.14; letter-spacing: -0.5px; }
+    .cta-footer p { font-family: 'Special Elite', Courier, monospace; font-size: 16px; color: rgba(244,239,228,0.92); max-width: 58ch; margin: 0 auto 34px; line-height: 1.75; }
+    .cta-footer p.closer { font-size: 18px; color: var(--cream); letter-spacing: 0.5px; margin: 14px auto 34px; }
+
+    /* FOOTER */
+    footer { display: flex; justify-content: space-between; align-items: center; padding: 28px 72px; background: var(--red-deep); }
+    .footer-logo { display: flex; align-items: center; gap: 9px; font-family: 'DM Serif Display', Georgia, serif; font-size: 25px; font-style: italic; color: var(--cream); }
+    .footer-leaf { height: 28px; width: auto; display: block; }
+    .footer-note { font-size: 12px; color: rgba(244,239,228,0.5); letter-spacing: 0.5px; }
+    .footer-social { display: flex; gap: 22px; align-items: center; }
+    .footer-social a { display: flex; color: rgba(244,239,228,0.75); transition: color 0.2s, transform 0.2s; }
+    .footer-social a:hover { color: var(--cream); transform: translateY(-2px); }
+    .footer-social svg { width: 22px; height: 22px; display: block; fill: currentColor; }
+
+    /* TABLET (incl. iPad): keep the hero photo visible, just relax spacing */
+    @media (max-width: 880px) {
+      nav, .section, .cta-footer, footer { padding-left: 24px; padding-right: 24px; }
+      .s-hero::after { background-position: 82% center; }
+      .s-hero .h-text { max-width: 540px; }
+      .s-hero h1 { font-size: 46px; }
+      .nav-links { gap: 14px; }
+      .nav-links a { font-size: 11px; }
+      .entry-card { grid-template-columns: 1fr; }
+      .entry-main { border-right: none; border-bottom: 1px solid var(--line); padding: 36px 28px 32px; }
+      .entry-side { padding: 32px 28px; }
+      .flagship-hero img { height: 360px; }
+      .flagship-hero .ftitle h3 { font-size: 38px; }
+      .why-head { flex-direction: column; align-items: flex-start; gap: 18px; margin-bottom: 30px; }
+      .why-head-text h2 { font-size: 32px; }
+      .why-photo { width: 84px; height: 84px; }
+      .why-grid { grid-template-columns: 1fr; gap: 30px; }
+      .sec-head h2 { font-size: 30px; }
+      .cta-footer h2 { font-size: 32px; }
+      .guarantee-box { padding: 40px 28px; }
+      .guarantee-box h2 { font-size: 32px; }
+      footer { flex-direction: column; gap: 14px; text-align: center; }
+    }
+
+    /* PHONE: photo can't compete with text at this width, so darken & stack */
+    @media (max-width: 600px) {
+      .s-hero { min-height: auto; }
+      .s-hero::after { background-position: 72% center; }
+      .s-hero::before { background: linear-gradient(180deg, rgba(40,21,16,0.86) 0%, rgba(64,31,24,0.82) 100%); }
+      .s-hero .wrap { padding: 60px 24px; }
+      .s-hero h1 { font-size: 33px; }
+      .flagship-hero img { height: 240px; }
+      .flagship-hero .ftitle { left: 24px; right: 24px; max-width: none; }
+      .flagship-hero .ftitle h3 { font-size: 32px; }
+      .flagship-body { padding: 32px 24px; }
+      .standard { padding: 32px 24px; }
+      .standard .foot { margin: 26px -24px -32px; padding: 20px 24px; }
+    }
+  </style>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://fellowcanadian.com/og.jpg">
+  <link rel="canonical" href="https://fellowcanadian.com/services">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo"><a href="index.html"><span>Fellow Canadian</span><img src="leaf.png" class="nav-leaf" alt=""></a></div>
+    <div class="nav-links">
+      <a href="services.html">Work With Me</a>
+      <a href="https://tidycal.com/devesh/short-meeting" target="_blank" rel="noopener" class="nav-cta">Let&#8217;s Talk</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="s-hero">
+    <div class="wrap">
+      <div class="h-text">
+        <h1>Solving marketing for US founders since 2015.</h1>
+        <div class="h-actions">
+          <a class="h-cta" href="#offers">Learn more</a>
+        </div>
+        <div class="h-proof">
+          <p class="h-trust">Trusted by <strong>100+ founders</strong>, from bootstrapped to venture backed.</p>
+          <p class="h-guarantee"><span class="g-check">&#10003;</span><span class="g-text">No tariffs, no catch. Outrageous <strong>double your money</strong> back promise.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF STRIP -->
+  <section class="section proof">
+    <div class="eyebrow"><span class="dot"></span>Founders I&#8217;ve worked with</div>
+    <div class="proof-marquee">
+      <div class="proof-track">
+        <span class="p-item"><img src="flag-ca.png" alt="Canada"> Product-Led Growth</span>
+        <span class="p-item"><img src="flag-us.png" alt="USA"> Rose Law Firm</span>
+        <span class="p-item"><img src="flag-us.png" alt="USA"> Bened Life</span>
+        <span class="p-item"><img src="flag-ca.png" alt="Canada"> The Coin</span>
+        <span class="p-item"><img src="flag-ca.png" alt="Canada"> LINGGO</span>
+        <span class="p-item"><img src="flag-us.png" alt="USA"> arqu</span>
+        <span class="p-item"><img src="flag-us.png" alt="USA"> Grepp</span>
+        <span class="p-item"><img src="flag-us.png" alt="USA"> Prefinery</span>
+        <span class="p-item"><img src="flag-ca.png" alt="Canada"> SparkCraft</span>
+        <span class="p-item"><img src="flag-us.png" alt="USA"> Co2ign</span>
+        <span class="p-item"><img src="flag-us.png" alt="USA"> Wandr</span>
+        <span class="p-item"><img src="flag-us.png" alt="USA"> SpoonWheel</span>
+        <span class="p-item"><img src="flag-us.png" alt="USA"> FirstStepHelp</span>
+        <span class="p-item" aria-hidden="true"><img src="flag-ca.png" alt=""> Product-Led Growth</span>
+        <span class="p-item" aria-hidden="true"><img src="flag-us.png" alt=""> Rose Law Firm</span>
+        <span class="p-item" aria-hidden="true"><img src="flag-us.png" alt=""> Bened Life</span>
+        <span class="p-item" aria-hidden="true"><img src="flag-ca.png" alt=""> The Coin</span>
+        <span class="p-item" aria-hidden="true"><img src="flag-ca.png" alt=""> LINGGO</span>
+        <span class="p-item" aria-hidden="true"><img src="flag-us.png" alt=""> arqu</span>
+        <span class="p-item" aria-hidden="true"><img src="flag-us.png" alt=""> Grepp</span>
+        <span class="p-item" aria-hidden="true"><img src="flag-us.png" alt=""> Prefinery</span>
+        <span class="p-item" aria-hidden="true"><img src="flag-ca.png" alt=""> SparkCraft</span>
+        <span class="p-item" aria-hidden="true"><img src="flag-us.png" alt=""> Co2ign</span>
+        <span class="p-item" aria-hidden="true"><img src="flag-us.png" alt=""> Wandr</span>
+        <span class="p-item" aria-hidden="true"><img src="flag-us.png" alt=""> SpoonWheel</span>
+        <span class="p-item" aria-hidden="true"><img src="flag-us.png" alt=""> FirstStepHelp</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIAL RIBBON -->
+  <div class="ribbon" id="offers">
+    <span class="star" style="left:4%; top:24%;">&#9733;</span>
+    <span class="star" style="left:11%; top:58%; font-size:9px; animation-delay:.5s;">&#9733;</span>
+    <span class="star" style="left:18%; top:22%; font-size:10px; animation-delay:1.1s;">&#9733;</span>
+    <span class="star" style="right:4%; top:52%; animation-delay:.3s;">&#9733;</span>
+    <span class="star" style="right:12%; top:22%; font-size:9px; animation-delay:1.4s;">&#9733;</span>
+    <span class="star" style="right:19%; top:60%; font-size:10px; animation-delay:.8s;">&#9733;</span>
+    Semiquincentennial Special. Everything 25% off
+    <span class="sub">For America&#8217;s 250th</span>
+  </div>
+
+  <!-- ENTRY OFFER -->
+  <div class="section entry">
+    <div class="standard reveal">
+      <h3 class="offer-title">Brand Clarity Call</h3>
+      <p class="promise">From overwhelmed to clear in 45 minutes.</p>
+      <p class="body">The surefire remedy for brand and marketing overwhelm. Like therapy, but with guaranteed results. In 45 minutes we sort out where to start, what to prioritize, and who to unfollow on social.</p>
+      <div class="icon-row">
+        <div class="ic"><svg width="30" height="30" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 5 H27 L34 12 V43 H13 Z"/><path d="M27 5 V12 H34"/><path d="M18 19 H29 M18 24 H29 M18 29 H24"/><g transform="translate(22.5,25.5) scale(0.72)" fill="#D42B1E" stroke="none"><path d="M12 1.5 L13.4 5.2 L16.6 3.6 L15.6 7.2 L19.4 6.6 L17.2 9.8 L21.6 10.8 L17.8 13.4 L20 16.2 L15.8 15.6 L16.4 19.4 L12.9 17.2 L12 21.5 L11.1 17.2 L7.6 19.4 L8.2 15.6 L4 16.2 L6.2 13.4 L2.4 10.8 L6.8 9.8 L4.6 6.6 L8.4 7.2 L7.4 3.6 L10.6 5.2 Z"/></g></svg></div>
+        <div><div class="lbl">Deliverable</div><div class="main">Clarity Doc</div><div class="sub">Your plan on one page. A summary of your next actions.</div></div>
+      </div>
+      <div class="icon-row">
+        <div class="ic"><svg width="34" height="34" viewBox="8 8 34 34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="25" r="11"/><path d="M13.5 24 c0-8 4.5-11.5 10.5-11.5 s10.5 3.5 10.5 11.5 c-2-4.5-5-6-10.5-6 s-8.5 1.5-10.5 6 z" fill="currentColor" stroke="none"/><rect x="15.5" y="20.5" width="7.5" height="5.5" rx="2.5" fill="#D42B1E" stroke="none"/><rect x="25" y="20.5" width="7.5" height="5.5" rx="2.5" fill="#D42B1E" stroke="none"/><path d="M23 23 h2 M15.5 22 L13.2 21 M32.5 22 L34.8 21" stroke="#D42B1E" stroke-width="1.6"/><path d="M20.5 31.5 q3.5 2.8 7 0.6" stroke-width="1.8"/></svg></div>
+        <div><div class="lbl">Best for</div><div class="main">Founders drowning in advice</div><div class="sub">Who need a clear next step, not another guru.</div></div>
+      </div>
+      <div class="foot">
+        <div class="price-wrap">
+          <div class="price"><span class="was">$99</span><span class="now">$74.25</span><small> / session</small></div>
+          <div class="price-note">or <span class="amt">$330</span> with code <span class="maga">ILOVETARIFFS</span></div>
+        </div>
+        <a class="cta" href="https://tidycal.com/devesh/short-meeting" target="_blank" rel="noopener">Book now &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE TWO ENGAGEMENTS -->
+  <div class="section engagements" style="padding-top: 56px;">
+
+    <!-- Flagship -->
+    <div class="flagship reveal">
+      <div class="flagship-hero">
+        <img src="devesh brand sprint.jpg" alt="Devesh at work on a brand sprint">
+        <div class="ftitle">
+          <h3>Brand Sprint</h3>
+          <span class="fsub">Lean startup meets brand strategy</span>
+        </div>
+      </div>
+      <div class="flagship-body">
+        <p class="promise">Positioning, messaging and the look.</p>
+        <p class="body">The whole foundation in one focused engagement: positioning, messaging, and a visual identity. This is the essential work you can&#8217;t ignore (though it&#8217;s the easiest to put off).</p>
+        <div class="icon-row">
+          <div class="ic"><svg width="30" height="30" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 5 H27 L34 12 V43 H13 Z"/><path d="M27 5 V12 H34"/><path d="M18 19 H29 M18 24 H29 M18 29 H24"/><g transform="translate(22.5,25.5) scale(0.72)" fill="#E3A99F" stroke="none"><path d="M12 1.5 L13.4 5.2 L16.6 3.6 L15.6 7.2 L19.4 6.6 L17.2 9.8 L21.6 10.8 L17.8 13.4 L20 16.2 L15.8 15.6 L16.4 19.4 L12.9 17.2 L12 21.5 L11.1 17.2 L7.6 19.4 L8.2 15.6 L4 16.2 L6.2 13.4 L2.4 10.8 L6.8 9.8 L4.6 6.6 L8.4 7.2 L7.4 3.6 L10.6 5.2 Z"/></g></svg></div>
+          <div><div class="lbl">Deliverable</div><div class="main">Your Brand Foundation Doc</div><div class="sub">Positioning, messaging, and visual identity, ready for primetime.</div></div>
+        </div>
+        <div class="icon-row">
+          <div class="ic"><svg width="34" height="34" viewBox="8 8 34 34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="25" r="11"/><path d="M13.5 24 c0-8 4.5-11.5 10.5-11.5 s10.5 3.5 10.5 11.5 c-2-4.5-5-6-10.5-6 s-8.5 1.5-10.5 6 z" fill="currentColor" stroke="none"/><rect x="15.5" y="20.5" width="7.5" height="5.5" rx="2.5" fill="#E3A99F" stroke="none"/><rect x="25" y="20.5" width="7.5" height="5.5" rx="2.5" fill="#E3A99F" stroke="none"/><path d="M23 23 h2 M15.5 22 L13.2 21 M32.5 22 L34.8 21" stroke="#E3A99F" stroke-width="1.6"/><path d="M20.5 31.5 q3.5 2.8 7 0.6" stroke-width="1.8"/></svg></div>
+          <div><div class="lbl">Best for</div><div class="main">Founders ready to stop patching the brand</div><div class="sub">And actually set it.</div></div>
+        </div>
+        <div class="foot">
+          <div class="price-wrap">
+            <div class="price"><span class="was">$3000</span><span class="now">$2250</span></div>
+            <div class="price-note">or <span class="amt">$6300</span> with code <span class="maga">ILOVETARIFFS</span></div>
+          </div>
+          <a class="cta cream" href="https://tidycal.com/devesh/short-meeting" target="_blank" rel="noopener">Book now &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Personal brand -->
+    <div class="standard reveal">
+      <h3 class="offer-title">Personal Brand Blueprint</h3>
+      <p class="promise">You are the brand. Let&#8217;s make that obvious.</p>
+      <p class="body">For founder-led companies, you are the brand, and it&#8217;s usually the one getting ignored. We find what you actually stand for, and how to connect with your believers. You stay yourself, just sharper and impossible to confuse with anyone else.</p>
+      <p class="body" style="margin-top:10px;font-style:italic;color:#888;">P.S. This isn&#8217;t a social media content strategy.</p>
+      <div class="icon-row">
+        <div class="ic"><svg width="30" height="30" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 5 H27 L34 12 V43 H13 Z"/><path d="M27 5 V12 H34"/><path d="M18 19 H29 M18 24 H29 M18 29 H24"/><g transform="translate(22.5,25.5) scale(0.72)" fill="#D42B1E" stroke="none"><path d="M12 1.5 L13.4 5.2 L16.6 3.6 L15.6 7.2 L19.4 6.6 L17.2 9.8 L21.6 10.8 L17.8 13.4 L20 16.2 L15.8 15.6 L16.4 19.4 L12.9 17.2 L12 21.5 L11.1 17.2 L7.6 19.4 L8.2 15.6 L4 16.2 L6.2 13.4 L2.4 10.8 L6.8 9.8 L4.6 6.6 L8.4 7.2 L7.4 3.6 L10.6 5.2 Z"/></g></svg></div>
+        <div><div class="lbl">Deliverable</div><div class="main">Your Personal Brand Blueprint</div><div class="sub">Belief led, not AI fed.</div></div>
+      </div>
+      <div class="icon-row">
+        <div class="ic"><svg width="34" height="34" viewBox="8 8 34 34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="25" r="11"/><path d="M13.5 24 c0-8 4.5-11.5 10.5-11.5 s10.5 3.5 10.5 11.5 c-2-4.5-5-6-10.5-6 s-8.5 1.5-10.5 6 z" fill="currentColor" stroke="none"/><rect x="15.5" y="20.5" width="7.5" height="5.5" rx="2.5" fill="#D42B1E" stroke="none"/><rect x="25" y="20.5" width="7.5" height="5.5" rx="2.5" fill="#D42B1E" stroke="none"/><path d="M23 23 h2 M15.5 22 L13.2 21 M32.5 22 L34.8 21" stroke="#D42B1E" stroke-width="1.6"/><path d="M20.5 31.5 q3.5 2.8 7 0.6" stroke-width="1.8"/></svg></div>
+        <div><div class="lbl">Best for</div><div class="main">Founders ready to invest in their personal brand</div><div class="sub">And who&#8217;re done being anonymous.</div></div>
+      </div>
+      <div class="foot">
+        <div class="price-wrap">
+          <div class="price"><span class="was">$270</span><span class="now">$202.50</span><small> / session</small></div>
+          <div class="price-note">or <span class="amt">$900</span> with code <span class="maga">ILOVETARIFFS</span></div>
+        </div>
+        <a class="cta" href="https://tidycal.com/devesh/short-meeting" target="_blank" rel="noopener">Book now &rarr;</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WHY ME -->
+  <section class="section why">
+    <div class="why-panel">
+    <div class="why-head reveal">
+      <span class="why-photo-ring">
+        <span class="why-photo"><img src="uba-cutout.png" alt="Devesh Uba"></span>
+        <span class="dust l" style="top:-14px; left:12px;" aria-hidden="true">&#10038;</span>
+        <span class="dust r" style="top:4px; right:-14px; animation-delay:.5s;" aria-hidden="true">&#10038;</span>
+        <span class="dust s b" style="top:-6px; right:-4px; animation-delay:1.6s;" aria-hidden="true">&#10038;</span>
+        <span class="dust p" style="bottom:0; left:-16px; animation-delay:1.1s;" aria-hidden="true">&#10038;</span>
+        <span class="dust s r" style="bottom:-10px; right:18px; animation-delay:1.9s;" aria-hidden="true">&#10038;</span>
+        <span class="dust b" style="top:38px; left:-18px; animation-delay:2.4s;" aria-hidden="true">&#10038;</span>
+        <span class="dust s" style="top:-16px; right:30px; animation-delay:.9s;" aria-hidden="true">&#10038;</span>
+        <span class="dust l p" style="bottom:-14px; left:30px; animation-delay:.3s;" aria-hidden="true">&#10038;</span>
+        <span class="dust s p" style="top:20px; left:-10px; animation-delay:2.1s;" aria-hidden="true">&#10038;</span>
+        <span class="dust r l" style="top:52px; right:-16px; animation-delay:1.4s;" aria-hidden="true">&#10038;</span>
+        <span class="dust s b" style="bottom:14px; right:-8px; animation-delay:2.7s;" aria-hidden="true">&#10038;</span>
+        <span class="dust" style="bottom:-6px; left:2px; animation-delay:.7s;" aria-hidden="true">&#10038;</span>
+      </span>
+      <div class="why-head-text">
+        <h2>Why me?</h2>
+        <p class="why-quote">&ldquo;If I could do one thing for a living, I&#8217;d invent brands.&rdquo;</p>
+      </div>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal">
+        <div class="why-num">01</div>
+        <h3>Brand Beyond Borders</h3>
+        <p>I&#8217;ve lived across three continents, building brands for consumer giants in India, banks in Nigeria, and startups in Silicon Valley. Different clients, countries, agencies; one common thread. Brand building. Whatever your business looks like, trust me, I&#8217;ve seen some version of it before.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-num">02</div>
+        <h3>Clarity as a Service</h3>
+        <p>Over the years, clarity has become an active pursuit. Thousands of hours of mindfulness meditation. Several silent retreats. Daily journaling. Relentless training to find the signal in the noise. You&#8217;re too busy building to take weeks off for a retreat, so here it is: clarity, as a service.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-num">03</div>
+        <h3>Unreasonable Obsession Since 2006</h3>
+        <p>It started at Leo Burnett and never let up. I probably own more advertising books than there are lakes in Ontario. This is the work I&#8217;d do for free. You just get to skip the decades it took to get good at it.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- CTA FOOTER (guarantee + booking) -->
+  <section class="cta-footer" id="contact">
+    <div class="seal-stamp" aria-hidden="true">
+      <svg class="seal-svg" viewBox="0 0 200 200">
+        <defs>
+          <path id="seal-arc-top" d="M28,100 a72,72 0 0,1 144,0"/>
+          <path id="seal-arc-bot" d="M28,100 a72,72 0 0,0 144,0"/>
+        </defs>
+        <circle cx="100" cy="100" r="95" fill="none" stroke="#F4EFE4" stroke-width="1.5"/>
+        <circle cx="100" cy="100" r="84" fill="none" stroke="#F4EFE4" stroke-width="3"/>
+        <text class="seal-top" text-anchor="middle"><textPath href="#seal-arc-top" startOffset="50%">FELLOW CANADIAN</textPath></text>
+        <text class="seal-bot" text-anchor="middle"><textPath href="#seal-arc-bot" startOffset="50%">DOUBLE-YOUR-MONEY GUARANTEE</textPath></text>
+        <text class="seal-star" x="19" y="106" text-anchor="middle">&#9733;</text>
+        <text class="seal-star" x="181" y="106" text-anchor="middle">&#9733;</text>
+      </svg>
+      <span class="seal-leaf"></span>
+    </div>
+    <h2>Double-your-money guarantee.</h2>
+    <p>Putting your brand out there takes courage. I get it. And just as other Canadians have carried the risk for Americans before, I&#8217;ll carry yours: if you don&#8217;t find real value in our work, I&#8217;ll refund you twice what you paid.</p>
+    <p class="closer">No questions asked.</p>
+    <a class="cta cream" href="https://tidycal.com/devesh/short-meeting" target="_blank" rel="noopener">Book a call &rarr;</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo"><span>Fellow Canadian</span><img src="leaf.png" class="footer-leaf" alt=""></div>
+    <div class="footer-social">
+      <a href="https://www.youtube.com/@BrandBroccoli" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+      </a>
+      <a href="https://medium.com/@deveshuba" target="_blank" rel="noopener" aria-label="Blog on Medium">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42S20.96 8.46 20.96 12zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/deveshuba/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 0 1-2.07-2.07 2.07 2.07 0 1 1 2.07 2.07zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+      </a>
+    </div>
+    <div class="footer-note">© 2026 Fellow Canadian</div>
+  </footer>
+
+  <script>
+    document.documentElement.classList.add('js');
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!('IntersectionObserver' in window) || reduce) {
+        els.forEach(function (el) { el.classList.remove('reveal'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var el = entry.target;
+          io.unobserve(el);
+          el.classList.add('in');
+          setTimeout(function () { el.classList.remove('reveal', 'in'); }, 1700);
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
