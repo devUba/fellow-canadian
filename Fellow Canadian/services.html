@@ -281,7 +281,7 @@
     @media (prefers-reduced-motion: reduce) { .proof-track { animation: none; flex-wrap: wrap; row-gap: 16px; } }
 
     /* WHY ME */
-    .why { padding-top: 88px; }
+    .why { padding-top: 44px; }
     .why-panel { padding: 0; }
     .why-head { display: flex; align-items: center; gap: 30px; margin-bottom: 40px; }
     .why-photo-ring { position: relative; flex-shrink: 0; }
@@ -464,12 +464,6 @@
   </div>
 
 
-  <style>
-    .tariff-note{max-width:780px;margin:48px auto 0;padding:0 24px;font-size:17px;line-height:1.7;color:var(--ink);text-align:center;}
-    @media (max-width:820px){.tariff-note{font-size:15px;margin-top:32px;}}
-  </style>
-  <p class="tariff-note">Tariffs are on things in boxes. Strategy, naming, messaging and design are not things in boxes. Nothing about working with me changed on Friday, including the price.</p>
-
   <!-- THE ENGAGEMENTS -->
   <div class="section engagements" style="padding-top: 56px;">
 
@@ -552,6 +546,26 @@
 
   </div>
 
+  <style>
+    .hl {
+      background-image: linear-gradient(rgba(255,160,80,0.30), rgba(255,160,80,0.30));
+      background-repeat: no-repeat; background-position: left center; background-size: 100% 100%;
+      padding: 0 2px; box-decoration-break: clone; -webkit-box-decoration-break: clone;
+    }
+    .hl.hl-anim {
+      background-size: 0% 100%;
+      transition: background-size 2.4s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    }
+    .hl.hl-anim.hl-on { background-size: 100% 100%; }
+    .vouch{max-width:760px;margin:0 auto;padding:56px 24px 0;text-align:center;
+           font-family:'DM Serif Display',Georgia,serif;font-style:italic;
+           font-size:22px;line-height:1.35;color:var(--grey);}
+    .vouch a{color:var(--red-dark);text-decoration:none;border-bottom:1px solid var(--line-red);}
+    .vouch a:hover{color:var(--red);}
+    @media (max-width:820px){.vouch{font-size:18px;padding-top:36px;}}
+  </style>
+  <p class="vouch">Looking for UX research or product marketing talent? You&#8217;re in luck. I know fellow Canadians I&#8217;d vouch for. <a href="https://tidycal.com/devesh/short-meeting" target="_blank" rel="noopener">Talk to me.</a></p>
+
   <!-- WHY ME -->
   <section class="section why">
     <div class="why-panel">
@@ -573,7 +587,7 @@
       </span>
       <div class="why-head-text">
         <h2>Why me?</h2>
-        <p class="why-quote">&ldquo;If I could do one thing for a living, I&#8217;d invent brands.&rdquo;</p>
+        <p class="why-quote">&ldquo;If I could <span class="hl"><em style="font-style:normal;">only</em> do one thing</span> for a living, I&#8217;d invent brands.&rdquo;</p>
       </div>
     </div>
     <div class="why-grid">
@@ -620,15 +634,6 @@
   </section>
 
 
-  <style>
-    .vouch{max-width:720px;margin:0 auto;padding:52px 24px 44px;text-align:center;
-           font-size:16px;line-height:1.75;color:var(--grey);}
-    .vouch a{color:var(--red-dark);font-weight:600;text-decoration:none;border-bottom:1px solid var(--line-red);}
-    .vouch a:hover{color:var(--red);}
-    @media (max-width:820px){.vouch{font-size:14.5px;padding-top:32px;}}
-  </style>
-  <p class="vouch">Looking for UX research or product marketing talent? You&#8217;re in luck. I know fellow Canadians I&#8217;d vouch for. <a href="https://tidycal.com/devesh/short-meeting" target="_blank" rel="noopener">Talk to me.</a></p>
-
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo"><span>Fellow Canadian</span><img src="leaf.png" class="footer-leaf" alt=""></div>
@@ -666,6 +671,18 @@
       }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
       els.forEach(function (el) { io.observe(el); });
     })();
+  </script>
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+      var hls = document.querySelectorAll('.hl');
+      hls.forEach(function (el) { el.classList.add('hl-anim'); });
+      var hlIo = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('hl-on'); hlIo.unobserve(e.target); }
+        });
+      }, { threshold: 0.6 });
+      hls.forEach(function (el) { hlIo.observe(el); });
+    }
   </script>
 </body>
 </html>
