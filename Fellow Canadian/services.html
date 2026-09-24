@@ -226,10 +226,10 @@
     .standard .quote { margin-top: 4px; margin-bottom: 0; }
 
     /* SPECIAL RIBBON */
-    .ribbon { position: relative; background: #3C3B6E; color: #FFFFFF; text-align: center; padding: 14px 20px 13px; font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 36px; border-top: 3px solid #B22234; border-bottom: 3px solid #B22234; overflow: hidden; }
+    .ribbon { position: relative; background: linear-gradient(90deg, #7A2E0E 0%, #B8561B 50%, #7A2E0E 100%); color: #FFF6E6; text-align: center; padding: 14px 20px 13px; font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 36px; border-top: 3px solid #E9A23B; border-bottom: 3px solid #E9A23B; overflow: hidden; }
     .ribbon .sub { display: block; font-size: 12px; font-weight: 500; letter-spacing: 0.3px; text-transform: none; color: rgba(255,255,255,0.88); margin-top: 5px; }
-    .ribbon .star { position: absolute; animation: rib-twinkle 2.5s infinite; }
-    @keyframes rib-twinkle { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
+    .ribbon .star { position: absolute; color: #F2B84B; animation: rib-twinkle 3s ease-in-out infinite; }
+    @keyframes rib-twinkle { 0%, 100% { opacity: 0.2; transform: rotate(-12deg); } 50% { opacity: 1; transform: rotate(12deg); } }
 
     /* ICON ROWS (deliverable / best for) */
     .icon-row { display: flex; align-items: center; gap: 15px; margin: 2px 0 18px; }
@@ -451,16 +451,16 @@
     </div>
   </section>
 
-  <!-- LABOUR DAY RIBBON -->
+  <!-- THANKSGIVING RIBBON -->
   <div class="ribbon" id="offers">
-    <span class="star" style="left:4%; top:24%;">&#9733;</span>
-    <span class="star" style="left:11%; top:58%; font-size:9px; animation-delay:.5s;">&#9733;</span>
-    <span class="star" style="left:18%; top:22%; font-size:10px; animation-delay:1.1s;">&#9733;</span>
-    <span class="star" style="right:4%; top:52%; animation-delay:.3s;">&#9733;</span>
-    <span class="star" style="right:12%; top:22%; font-size:9px; animation-delay:1.4s;">&#9733;</span>
-    <span class="star" style="right:19%; top:60%; font-size:10px; animation-delay:.8s;">&#9733;</span>
-    Labour Day Special. Everything 25% off
-    <span class="sub">That&#8217;s Labour, with a &#8216;u&#8217;. Ends Sept 18.</span>
+    <span class="star" style="left:4%; top:24%;">&#127809;</span>
+    <span class="star" style="left:11%; top:58%; font-size:9px; animation-delay:.5s;">&#127809;</span>
+    <span class="star" style="left:18%; top:22%; font-size:10px; animation-delay:1.1s;">&#127809;</span>
+    <span class="star" style="right:4%; top:52%; animation-delay:.3s;">&#127809;</span>
+    <span class="star" style="right:12%; top:22%; font-size:9px; animation-delay:1.4s;">&#127809;</span>
+    <span class="star" style="right:19%; top:60%; font-size:10px; animation-delay:.8s;">&#127809;</span>
+    Thanksgiving Special. Everything 25% off
+    <span class="sub">That&#8217;s Canadian Thanksgiving. Ends Oct 15.</span>
   </div>
 
 
@@ -526,7 +526,7 @@
       <p class="promise">If you could do this on your own, you&#8217;d be Gary&nbsp;Vee by&nbsp;now.</p>
       <p class="body">For founder-led companies, you are the brand, and it&#8217;s usually the one getting ignored. We find what you actually stand for, and how to connect with your believers. You stay yourself, just sharper and impossible to confuse with anyone else.</p>
       <p class="body" style="margin-top:10px;font-style:italic;color:#888;">P.S. This isn&#8217;t a social media content strategy.</p>
-      <p class="body" style="margin-top:8px;font-style:italic;color:#888;">Minimum six months. Brands aren&#8217;t built in a quarter.</p>
+      <p class="body" style="margin-top:8px;font-style:italic;color:#888;">Minimum six months commitment. <a href="https://medium.com/startup-stash/the-three-cs-of-personal-brand-b07b09c883c0" target="_blank" rel="noopener" style="color:var(--red);font-weight:600;text-decoration:none;border-bottom:1px solid currentColor;">Here&#8217;s the process.</a></p>
       <div class="icon-row">
         <div class="ic"><svg width="30" height="30" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 5 H27 L34 12 V43 H13 Z"/><path d="M27 5 V12 H34"/><path d="M18 19 H29 M18 24 H29 M18 29 H24"/><g transform="translate(22.5,25.5) scale(0.72)" fill="#D42B1E" stroke="none"><path d="M12 1.5 L13.4 5.2 L16.6 3.6 L15.6 7.2 L19.4 6.6 L17.2 9.8 L21.6 10.8 L17.8 13.4 L20 16.2 L15.8 15.6 L16.4 19.4 L12.9 17.2 L12 21.5 L11.1 17.2 L7.6 19.4 L8.2 15.6 L4 16.2 L6.2 13.4 L2.4 10.8 L6.8 9.8 L4.6 6.6 L8.4 7.2 L7.4 3.6 L10.6 5.2 Z"/></g></svg></div>
         <div><div class="lbl">Deliverable</div><div class="main">Your Personal Brand Blueprint</div><div class="sub">Belief led, not AI fed.</div></div>
@@ -587,7 +587,7 @@
       </span>
       <div class="why-head-text">
         <h2>Why me?</h2>
-        <p class="why-quote">&ldquo;If I could <span class="hl"><em style="font-style:normal;">only</em> do one thing</span> for a living, I&#8217;d invent brands.&rdquo;</p>
+        <p class="why-quote">Twenty years building brands on three continents. <span class="hl">Collaborated with 100+ founders.</span></p>
       </div>
     </div>
     <div class="why-grid">
@@ -603,7 +603,7 @@
       </div>
       <div class="why-item reveal">
         <div class="why-num">03</div>
-        <h3>Unreasonable Obsession Since 2006</h3>
+        <h3>Two Decades of Unreasonable Obsession</h3>
         <p>It started at Leo Burnett and never let up. I probably own more advertising books than there are lakes in Ontario. This is the work I&#8217;d do for free. You just get to skip the decades it took to get good at it.</p>
       </div>
     </div>
@@ -638,14 +638,14 @@
   <footer>
     <div class="footer-logo"><span>Fellow Canadian</span><img src="leaf.png" class="footer-leaf" alt=""></div>
     <div class="footer-social">
-      <a href="https://www.youtube.com/@BrandBroccoli" target="_blank" rel="noopener" aria-label="YouTube">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
-      </a>
       <a href="https://medium.com/@deveshuba" target="_blank" rel="noopener" aria-label="Blog on Medium">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42S20.96 8.46 20.96 12zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
       </a>
       <a href="https://www.linkedin.com/in/deveshuba/" target="_blank" rel="noopener" aria-label="LinkedIn">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 0 1-2.07-2.07 2.07 2.07 0 1 1 2.07 2.07zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/deveshuba/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill:none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.6" cy="6.4" r="0.6" fill="currentColor" stroke="none"/></svg>
       </a>
     </div>
     <div class="footer-note">© 2026 Fellow Canadian</div>
